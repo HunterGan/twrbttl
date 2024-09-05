@@ -1,0 +1,1 @@
+export {default as appReducer, appSlice} from "./app.slice.ts"
