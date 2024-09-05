@@ -1,0 +1,41 @@
+.triple-dot-loading {
+  display: inline-block;
+  clip-path: inset(0 1.2ch 0 0);
+  animation: tripleDotLoading 1.5s steps(4) infinite;
+}
+
+@keyframes tripleDotLoading {
+  to {
+    clip-path: inset(0 -0.5ch 0 0)
+  }
+}
+
+input {
+  font-family: Inter-Regular, sans-serif;
+}
+
+html > body {
+  display: inline; /* fix svg bag when overflow: hidden set in the body  */
+}
+
+* {
+  box-sizing: border-box;
+}
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.hide {
+  display: none;
+}
+
+.placeholder::before {
+  content: attr(data-placeholder);
+  pointer-events: none;
+  float: left;
+  height: 0;
+}
+
+.emoji {
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji", sans-serif;
+}
